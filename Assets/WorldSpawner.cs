@@ -47,7 +47,7 @@ public class WorldSpawner : MonoBehaviour
                     float spikeHeigthPos = Random.Range(-4f, -8f);
                     GameObject spike = Instantiate(worldItems[2], new Vector2(lastSpawnpos.x + distanceBetweenObstacles + obstacleToPlayerSpawnDistance, spikeHeigthPos*dir), Quaternion.identity);
                     spike.transform.localScale= new Vector3(spike.transform.localScale.x, spike.transform.localScale.y*dir, spike.transform.localScale.z);
-                    distanceBetweenObstacles = Random.Range(5, 8);
+                    distanceBetweenObstacles = Random.Range(6, 8);
 
                     break;
                 case "coins":

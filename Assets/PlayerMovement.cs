@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         //Check if Groundet -> Velocity = 0 or Die
         if (transform.position.y <= -4.2f)
         {
-            Debug.Log(rigidbody.velocity.y);
             if (rigidbody.velocity.y > -8.75f)
             {
                 rigidbody.velocity = new Vector2(0, 0);
@@ -83,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Die()
     {
+        gameObject.GetComponent<ScoreManager>().SaveScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
